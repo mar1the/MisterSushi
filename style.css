@@ -1,0 +1,358 @@
+:root{
+    --mainColor:#f6f6fa;
+    --darkBlack: #2d2f31; 
+    --darkGrey: #61666b;
+    --grey: #d5d5d5;
+    --lightGrey: #f2f2f2;
+    --yellow: #fecb40;
+    --red: #df113c;
+}
+
+*{
+    margin:0;
+    padding:0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    color: var(--darkBlack);
+    background-color: rgb(248, 58, 58);; 
+}
+
+p{
+    font-size: 14px;
+}
+
+.label-cart{
+    position: fixed;
+    top:15;
+    right: 10;
+    z-index: 4;
+    cursor: pointer;
+    float: right;
+    padding-top:10px;
+    width: 20px;
+    height: 20px;
+}
+
+.logo{
+    position: fixed;
+    background-color: rgb(43, 39, 39);
+    color: var(--lightGrey);
+    width:100%;
+    text-align: center;
+    padding: 15px 420px 15px 60px;
+    top: 0;
+    z-index: 2; 
+    margin: 0;
+    
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left:0;
+    width:50px;
+    height: 100%;
+    background-color: rgb(43, 39, 39);
+    z-index: 1;
+    padding-top: 70px;
+}
+
+.sidebar-menu{
+    width: 100%;
+    text-align: center; 
+    padding: 30px 5px;
+    color: white;
+}
+
+.sidebar-menu > a{
+text-decoration: none;
+font-size: 0.8rem;
+line-height: 1.5;
+color: var(--darkGrey)
+}
+
+.sidebar-menu:hover{
+    border-right: 2px solid var(--yellow);
+    color: var(--yellow);
+}
+
+.sidebar-menu:hover>a{
+    color: var(--yellow);
+}
+
+.carousel {
+    max-width:  1430px;
+    max-height: 65vh;
+    align-items: center;
+    margin-right: auto;
+    border-radius: 20px;
+    border-top: 10px;
+    border-left: 10px;
+    border-right: 10px;
+    border-bottom: 10px;
+    border-color: rgb(56, 55, 55);
+    border-style: solid;
+    
+   
+}
+.img{
+    width: 2000px; 
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.dashboard-title{
+    padding: 0 1rem;
+    margin-top: 20px;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.dashboard-menu{
+    display: flex;
+    gap: 10px;
+    padding: 0.3rem 1rem;
+    overflow-x: auto;
+    
+    padding-bottom: 20px;
+}
+
+.dashboard-menu > a{
+    text-decoration: none;
+    text-align: center;
+    border-radius: 20px;
+    min-width: 270px;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(56, 55, 55);
+}
+
+.dashboard-menu > a:hover{
+    background-color: var(--red);
+    color: var(--lightGrey);
+
+}
+.dashboard-order > h3{
+    padding-top: 50px;
+}
+
+.dashboard-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 20px;
+    padding: 0.5rem 1rem 1rem 1rem;
+
+}
+
+.dashboard-card{
+    background-color: rgb(175, 62, 62) ;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-image{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.dashboard-card:hover{
+    box-shadow: rgba(0,0,0, 0.35) 0px 5px 10px;
+}
+
+.card-detail{
+    padding: 10px;
+    color: white;
+}
+
+.card-detail > h4 > span {
+    float: right;
+    font-size: 20px;
+    font-weight: 800px;
+    
+    color: white;
+}
+.card-detail > h4{
+    font-size: 20px;
+    font-weight: 800px;
+    
+    color: white;
+}
+
+.card-time{
+    color: white;
+    font-size: 0.8rem;
+    padding-top: 10px;
+}
+
+.dashboard{
+    height: 100%;
+    width: 100%;
+    padding-right: 360px;
+    padding-left: 60px;
+    padding-top: 90px;
+    background-color: rgb(248, 58, 58);
+}
+
+.dashboard-order{
+    width: 340px;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--mainColor);
+    z-index: 3;
+}
+
+.dashboard-order > h3{  
+    padding: 10 px 0;
+}
+
+.order-address > h4{
+    
+}
+
+.order-time{
+    font-size: 0.8rem;
+    color: var(--darkGrey)
+}
+
+.order-wrapper{
+    height: 180px;
+    width: 100%;
+    overflow-y: scroll;
+    margin: 20px 0;
+}
+
+.order-wrapper::-webkit-scrollbar {
+    width: 7px;
+}
+
+.order-wrapper::-webkit-scrollbar-track{
+    background-color: var(--lightGrey);
+    border-radius: 20px;
+}
+
+.order-wrapper::-webkit-scrollbar-thumb{
+    background-color: var(--darkGrey);
+    border-radius: 20px;
+}
+
+.dashboard-menu::-webkit-scrollbar {
+    width: 7px;
+}
+
+.dashboard-menu::-webkit-scrollbar-track{
+    background-color: var(--lightGrey);
+    border-radius: 20px;
+}
+
+.dashboard-menu::-webkit-scrollbar-thumb{
+    background-color: var(--darkGrey);
+    border-radius: 20px;
+}
+
+.order-card{
+    display:grid;
+    grid-template-columns: 0.6fr 1fr 0.5fr;
+    padding: 10px 0;
+    gap: 5px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.order-image{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.order-detail > input{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 2px solid var(--grey);
+    border-radius: 10px;
+    background-color: transparent;
+    margin-left: 10px;
+    margin-left: 10px;
+}
+
+
+.divider{
+    width: 100%;
+    border: 1px dashed var(--grey);
+}
+
+.order-total > p{
+    padding: 10px 0;
+}
+
+.order-total > p> span{
+    float: right; 
+    font-weight: 600;
+}
+
+.order-promo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--lightGrey);
+    border: 2px solid var(--grey);
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 5px;
+    margin: 5px 0 10px 0;
+}
+
+.input-promo{
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+.button-promo{
+    float: right;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 5px;
+    height: 80%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.checkout{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color:  rgb(248, 58, 58);;
+    border: none;
+    border-radius: 20px;
+    color: var(--lightGrey);
+    cursor: pointer;
+}
+
+.checkout:hover{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.logo-pic{
+    max-width: 50px;
+    max-height: 50px;
+    padding-right: 10px;
+
+}
